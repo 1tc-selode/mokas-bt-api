@@ -17,7 +17,9 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->sentence(2),
+            'description' => fake()->paragraph(),
+            'status' => fake()->randomElement(['függőben','folyamatban','befejezve'])
         ];
     }
 }
